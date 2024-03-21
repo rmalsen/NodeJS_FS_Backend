@@ -6,7 +6,6 @@
   "scripts": {
     "test": "jest --coverage",
     "start": "nodemon server"
-    
   },
   "keywords": [
     "NodeJS",
@@ -16,6 +15,7 @@
   "author": "Rik van Malsen",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.0"
   },
