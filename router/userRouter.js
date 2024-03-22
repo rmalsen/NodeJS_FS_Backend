@@ -1,68 +1,21 @@
 const express = require('express');
 const router = express.Router();
 
-// http://localhost:3001/users
-router.get('/', (req,res,next)=>{
-    res.status(200).json({
-        message: "successful -GET",
-        metadata: {
-            hostname:req.hostname,
-            method: req.method
-        }
-    })
+router.post('/register', (req, res, next)=>{
+    // Find User 
+    // If the user exists
+    // return response that says email exists try loggin in
+    // else
+    // encrypt the password
+    // set the password with the encrypted password
+    // Save the user to the database
 })
 
-// http://localhost:3001/users/34
-router.get('/:id', (req,res,next)=>{
-        res.status(200).json({
-            message: "Successful - GET by ID",
-            metadata: {
-                id: req.params.id,
-                hostname: req.hostname,
-                method: req.method
 
-            }
-        })
+
+router.post('/login', (req,res)=>{
+
 })
 
-// http://localhost:3001/users
-// Successful POST is returned as a 201 code
-router.post('/', (req,res,next)=>{
-    const name = req.body.name;
-    res.status(201).json({
-        message: "successful - POST",
-        metadata: {
-            name: name,
-            hostname:req.hostname,
-            method: req.method
-        }
-    })
-})
-
-// http://localhost:3001/users/34
-router.put('/:id', (req,res,next)=>{
-    res.status(200).json({
-        message: "Successful - PUT by ID",
-        metadata: {
-            id: req.params.id,
-            hostname: req.hostname,
-            method: req.method
-
-        }
-    })
-})
-
-// http://localhost:3001/users/34
-router.delete('/:id', (req,res,next)=>{
-    res.status(200).json({
-        message: "Successful - DELETE by ID",
-        metadata: {
-            id: req.params.id,
-            hostname: req.hostname,
-            method: req.method
-
-        }
-    })
-})
 
 module.exports = router;
