@@ -4,11 +4,11 @@ const userSchema = mongoose.Schema({
     // id 
     // firstName, lastName, address , city, state, zip ,email, password
     _id: mongoose.Schema.Types.ObjectId,
-    FirstName: {
+    firstName: {
         type: String,
         required: true
     },
-    LastName: {
+    lastName: {
         type: String,
         required: true
     },
@@ -24,7 +24,7 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    zip:{
+    zipCode:{
         type: String,
         required: true
     },
