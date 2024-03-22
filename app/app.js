@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const userRouter = require('../router/userRouter')
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.get('/', (req, res, next)=>{
 })
 
 // routers
+app.use('/users', userRouter)
 // app.use("/register", registrationRouter)
 
 
