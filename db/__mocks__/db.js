@@ -1,3 +1,4 @@
+
 const connect = async () => {
     console.log('MongoDB mocked connection.')
   
@@ -35,3 +36,4 @@ const saveUser = async (newUser) => {
 };
 
 module.exports = { connect, disconnect, findUser, saveUser };
+

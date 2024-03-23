@@ -1,0 +1,12 @@
+"use strict";
+
+var errorTemplate = function errorTemplate(res, err, message) {
+  return res.status(501).json({
+    error: {
+      message: message,
+      status: err.status
+    }
+  });
+};
+
+module.exports = errorTemplate;
